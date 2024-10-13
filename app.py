@@ -10,7 +10,7 @@ import numpy as np
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], suppress_callback_exceptions=True)
 server = app.server
 
-df = pd.read_csv('https://raw.githubusercontent.com/KhalidBatran/MCM-project-2/refs/heads/main/assets/Cleaned%20Animal%20Shelter%20Data.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/Meloore/FinalProject/refs/heads/main/assets/Cleaned%20Animal%20Shelter%20Data.csv')
 
 top_breeds_by_year = df.groupby(['Year', 'Breed']).size().reset_index(name='Count')
 overall_top_breeds = df['Breed'].value_counts().nlargest(10).index
